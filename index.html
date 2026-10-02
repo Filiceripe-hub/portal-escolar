@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portal Escolar</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            color: #172033;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        header h1 {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        header p {
+            font-size: 20px;
+        }
+
+        nav {
+            background: white;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #2563eb;
+            font-weight: bold;
+            margin: 0 12px;
+        }
+
+        nav a:hover {
+            color: #7c3aed;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+
+        .container h2 {
+            text-align: center;
+            margin-bottom: 35px;
+            font-size: 32px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .emoji {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #64748b;
+        }
+
+        .quiz {
+            margin-top: 50px;
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 10px;
+            background: #2563eb;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #7c3aed;
+        }
+
+        #resultado {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #172033;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🏆 Meu Portal Escolar</h1>
+        <p>Aprender pode ser divertido! 🚀</p>
+    </header>
+
+    <nav>
+        <a href="#disciplinas">📚 Disciplinas</a>
+        <a href="#quiz">🧠 Quiz</a>
+        <a href="#projetos">🚀 Projetos</a>
+    </nav>
+
+    <section class="container" id="disciplinas">
+        <h2>📚 Disciplinas</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="emoji">➗</div>
+                <h3>Matemática</h3>
+                <p>Desafios, contas e problemas.</p>
+            </div>
+
+            <div class="card">
+                <div class="emoji">📖</div>
+                <h3>Português</h3>
+                <p>Gramática, literatura e escrita.</p>
+            </div>
+
+            <div class="card">
+                <div class="emoji">🌍</div>
+                <h3>Geografia</h3>
+                <p>Países, mapas e continentes.</p>
+            </div>
+
+            <div class="card">
+                <div class="emoji">📜</div>
+                <h3>História</h3>
+                <p>Descobre acontecimentos do passado.</p>
+            </div>
+
+            <div class="card">
+                <div class="emoji">🔬</div>
+                <h3>Ciências</h3>
+                <p>Explora o mundo e a natureza.</p>
+            </div>
+
+            <div class="card">
+                <div class="emoji">🇬🇧</div>
+                <h3>Inglês</h3>
+                <p>Aprende palavras e expressões.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="container" id="quiz">
+        <h2>🧠 Quiz</h2>
+
+        <div class="quiz">
+            <h3>Qual é a capital de Portugal?</h3>
+
+            <button onclick="responder('Lisboa')">Lisboa</button>
+            <button onclick="responder('Porto')">Porto</button>
+            <button onclick="responder('Coimbra')">Coimbra</button>
+
+            <p id="resultado"></p>
+        </div>
+    </section>
+
+    <section class="container" id="projetos">
+        <h2>🚀 Projetos</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="emoji">🌎</div>
+                <h3>Explorador de Países</h3>
+                <p>Descobre países, capitais e curiosidades.</p>
+            </div>
+
+            <div class="card">
+                <div class="emoji">🚀</div>
+                <h3>Explorar o Espaço</h3>
+                <p>Planetas, estrelas e galáxias.</p>
+            </div>
+
+            <div class="card">
+                <div class="emoji">🏆</div>
+                <h3>Desafios</h3>
+                <p>Resolve desafios e testa os teus conhecimentos.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 — Meu Portal Escolar 🏆</p>
+    </footer>
+
+    <script>
+        function responder(resposta) {
+
+            const resultado = document.getElementById("resultado");
+
+            if (resposta === "Lisboa") {
+                resultado.textContent = "🎉 Correto! Lisboa é a capital de Portugal!";
+            } else {
+                resultado.textContent = "❌ Não é essa! Tenta novamente.";
+            }
+        }
+    </script>
+
+</body>
+</html>
